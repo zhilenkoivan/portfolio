@@ -1,0 +1,89 @@
+@import "vendor/reset.scss";
+
+body{
+    background: #1F1F1F;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+section{
+    margin-bottom: 150px;
+    @media (max-width: 768px) {
+        margin-bottom: 50px;
+    }
+    @media (max-width: 576px) {
+        margin-bottom: 30px;
+    }
+}
+.caption{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 170%;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.59);
+}
+.title{
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 55px;
+    @media (max-width: 768px) {
+        font-size: 40px;
+     }
+    @media (max-width: 576px) {
+        font-size: 36px;
+     }
+}
+.drop{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.overlay{
+    max-width: 1300px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-left: 1px solid rgba(255, 255, 255, 0.11);
+    border-right: 1px solid rgba(255, 255, 255, 0.11);
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 33%;
+        width: 1px;
+        z-index: -111;
+        background-color: rgba(255, 255, 255, 0.11);
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 33%;
+        width: 1px;
+        z-index: -111;
+        background-color: rgba(255, 255, 255, 0.11);
+    }
+}
+.container{
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    @media (max-width: 1300px) {
+        padding: 0 15px;
+    }
+}
+
+@import "blocks/header.scss";
+@import "blocks/hero.scss";
+@import "blocks/about.scss";
+@import "blocks/projects.scss";
+@import "blocks/drop.scss";
+@import "blocks/contact.scss";
+@import "blocks/form.scss";
+@import "blocks/reviews.scss";
+@import "blocks/footer.scss";
+

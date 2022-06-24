@@ -1,0 +1,52 @@
+.drop{
+    display: flex;
+    flex-direction: column;
+    &__item{
+        width: 865px;
+        @media (max-width: 1200px) {
+            width: 600px;
+        }
+        @media (max-width: 768px) {
+            width: 250px;
+        }
+        @media (max-width: 576px) {
+            width: 340px;
+        }
+        &--wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: all .3s linear;
+        }
+        .arrow{
+            transform: rotate(0deg);
+            transition: all .3s linear;
+        }
+        .active{
+            color: #1378EF;
+            .arrow{
+                transform: rotate(-90deg);
+                transition: all .3s linear;
+            }
+        }
+        &-name{
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 55px;
+        }
+        &-text{
+            font-size: 16px;
+            line-height: 170%;
+            opacity: 0;
+            z-index: -1;
+            margin-top: -20px;
+            transition: all .3s linear;
+        }
+        .droped{
+            opacity: 1;
+            margin-top: 0; 
+        }
+    }
+
+}

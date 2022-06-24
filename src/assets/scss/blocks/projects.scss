@@ -1,0 +1,44 @@
+.projects{
+    &-title{
+        margin-bottom: 72px;
+        @media (max-width: 576px) {
+            margin-bottom: 35px;
+         }
+    }
+    &__tabs{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    &__tabs-item{
+        margin-right: 50px;
+        margin-bottom: 30px;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 150%;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.59);
+        &--active {
+            color: #FFFFFF;
+        }
+        @media (max-width: 576px) {
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+    }
+}
+.tab{
+    display: none;
+    &--active{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 55px;
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+}
